@@ -1,0 +1,42 @@
+.holeNumber{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    
+    
+}
+.holePARNumber{
+    display: flex;
+    flex-direction: row;
+    
+    
+}.holePoints{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.scoreName{
+    font-weight: bold;
+    min-width: 40px;
+    
+
+}
+.scoreData{
+    text-align: center;
+    min-width: 20px;
+
+}
+
+.scoreDataRed{
+    text-align: center;
+    min-width: 20px;
+    background-color: red;
+}
+
+
+.scoreDataGreen{
+    text-align: center;
+    min-width: 20px;
+    background-color: green;
+}

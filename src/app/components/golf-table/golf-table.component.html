@@ -1,0 +1,297 @@
+<!-- <p>golf-table works!</p> -->
+<table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="First">
+      <th mat-header-cell *matHeaderCellDef> First </th>
+      <td mat-cell *matCellDef="let element"> {{element.First}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Last">
+      <th mat-header-cell *matHeaderCellDef> Last </th>
+      <td mat-cell *matCellDef="let element"> {{element.Last}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="MSTID">
+      <th mat-header-cell *matHeaderCellDef> MSTID </th>
+      <td mat-cell *matCellDef="let element"> {{element.MSTID}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="course">
+      <th mat-header-cell *matHeaderCellDef> course </th>
+      <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Sex">
+      <th mat-header-cell *matHeaderCellDef> Sex </th>
+      <td mat-cell *matCellDef="let element"> {{element.Sex}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Match">
+      <th mat-header-cell *matHeaderCellDef> Match </th>
+      <td mat-cell *matCellDef="let element"> {{element.Match}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Nationality">
+      <th mat-header-cell
+      *matHeaderCellDef> Nationality </th>
+      <td mat-cell *matCellDef="let element"> {{element.Nationality}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="score">
+      <th mat-header-cell
+      *matHeaderCellDef> Score </th>
+      <td mat-cell *matCellDef="let element"> 
+        <div class="holeNumber">
+          <div class="scoreName">
+            Holes 
+
+          </div>
+          <div class="scoreData">1</div>
+          <div class="scoreData">2</div>
+          <div class="scoreData">3</div>
+          <div class="scoreData">4</div>
+          <div class="scoreData">5</div>
+          <div class="scoreData">6</div>
+          <div class="scoreData">7</div>
+          <div class="scoreData">8</div>
+          <div class="scoreData">9</div>
+          <div class="scoreData">10</div>
+          <div class="scoreData">11</div>
+          <div class="scoreData">12</div>
+          <div class="scoreData">13</div>
+          <div class="scoreData">14</div>
+          <div class="scoreData">15</div>
+          <div class="scoreData">16</div>
+        </div>
+        <div class="holePARNumber">
+          <div class="scoreName">
+            PAR 
+
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole1Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole2Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole3Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole4Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole5Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole6Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole7Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole8Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole9Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole10Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole11Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole12Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole13Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole14Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole15Strokes}}
+          </div>
+          <div class="scoreData"> 
+            {{element.Hole16Strokes}}
+          </div>
+        </div> 
+        <div class="holePoints"><div class="scoreName">
+          STP 
+
+        </div>
+        <div class="holePoints" >
+          <div class="scoreDataRed " *ngIf="element.Hole1STP>0"> 
+            {{element.Hole1STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole1STP==0"> 
+            {{element.Hole1STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole1STP>0) && element.Hole1STP!=0"> 
+            {{element.Hole1STP}}
+          </div>
+
+          <div class="scoreDataRed " *ngIf="element.Hole2STP>0"> 
+            {{element.Hole2STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole2STP==0"> 
+            {{element.Hole2STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole2STP>0) && element.Hole2STP!=0"> 
+            {{element.Hole2STP}}
+          </div>
+
+          <div class="scoreDataRed " *ngIf="element.Hole3STP>0"> 
+            {{element.Hole3STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole3STP==0"> 
+            {{element.Hole3STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole3STP>0) && element.Hole3STP!=0"> 
+            {{element.Hole3STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole4STP>0"> 
+            {{element.Hole4STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole4STP==0"> 
+            {{element.Hole4STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole4STP>0) && element.Hole4STP!=0"> 
+            {{element.Hole4STP}}
+          </div>
+
+          <div class="scoreDataRed " *ngIf="element.Hole5STP>0"> 
+            {{element.Hole5STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole5STP==0"> 
+            {{element.Hole5STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole5STP>0) && element.Hole5STP!=0"> 
+            {{element.Hole5STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole6STP>0"> 
+            {{element.Hole6STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole6STP==0"> 
+            {{element.Hole6STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole6STP>0) && element.Hole6STP!=0"> 
+            {{element.Hole6STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole7STP>0"> 
+            {{element.Hole7STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole7STP==0"> 
+            {{element.Hole7STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole7STP>0) && element.Hole7STP!=0"> 
+            {{element.Hole7STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole8STP>0"> 
+            {{element.Hole8STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole8STP==0"> 
+            {{element.Hole8STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole8STP>0) && element.Hole8STP!=0"> 
+            {{element.Hole8STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole9STP>0"> 
+            {{element.Hole9STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole9STP==0"> 
+            {{element.Hole9STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole9STP>0) && element.Hole9STP!=0"> 
+            {{element.Hole9STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole10STP>0"> 
+            {{element.Hole10STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole10STP==0"> 
+            {{element.Hole10STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole10STP>0) && element.Hole10STP!=0"> 
+            {{element.Hole10STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole11STP>0"> 
+            {{element.Hole11STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole11STP==0"> 
+            {{element.Hole11STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole11STP>0) && element.Hole11STP!=0"> 
+            {{element.Hole11STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole12STP>0"> 
+            {{element.Hole12STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole12STP==0"> 
+            {{element.Hole12STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole12STP>0) && element.Hole12STP!=0"> 
+            {{element.Hole12STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole13STP>0"> 
+            {{element.Hole13STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole13STP==0"> 
+            {{element.Hole13STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole13STP>0) && element.Hole13STP!=0"> 
+            {{element.Hole13STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole14STP>0"> 
+            {{element.Hole14STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole14STP==0"> 
+            {{element.Hole14STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole14STP>0) && element.Hole14STP!=0"> 
+            {{element.Hole14STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole15STP>0"> 
+            {{element.Hole15STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole15STP==0"> 
+            {{element.Hole15STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole15STP>0) && element.Hole15STP!=0"> 
+            {{element.Hole15STP}}
+          </div>
+          
+          <div class="scoreDataRed " *ngIf="element.Hole16STP>0"> 
+            {{element.Hole16STP}}
+          </div>
+          <div class="scoreData " *ngIf="element.Hole16STP==0"> 
+            {{element.Hole16STP}}
+          </div>
+          <div class="scoreDataGreen " *ngIf="!(element.Hole16STP>0) && element.Hole16STP!=0"> 
+            {{element.Hole16STP}}
+          </div>
+        </div>
+      </div> 
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="holesPlayed">
+      <th mat-header-cell
+      *matHeaderCellDef> HolesPlayed </th>
+      <td mat-cell *matCellDef="let element"> {{element.holesPlayed}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>

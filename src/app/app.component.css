@@ -1,0 +1,12 @@
+
+  .content {
+    display: block;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+table {
+    width: 90%;
+  }
