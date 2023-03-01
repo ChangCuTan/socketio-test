@@ -3,6 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { GolfResult } from 'src/app/model/golf-result';
 import { GolfSocketIoService } from 'src/app/service/golf-socket-io.service';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-golf-table',
@@ -18,6 +19,7 @@ export class GolfTableComponent implements OnInit {
   dataSource: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) matSort!: MatSort;
 
   constructor(
     private socketIo: GolfSocketIoService) {
@@ -40,9 +42,13 @@ export class GolfTableComponent implements OnInit {
   }
 
   updateTable(data: GolfResult) {
+    if(this.tableResult.some(result => result.MSTID ===data .MSTID)){
+      this.tableResult =this.tableResult.filter(record=>record.MSTID !=data .MSTID)
+    }
     this.tableResult.unshift(data);//put on top first in the list
     this.dataSource = new MatTableDataSource<GolfResult>(this.tableResult);
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort=this.matSort;
 
   }
 
