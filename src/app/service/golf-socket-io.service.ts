@@ -19,8 +19,6 @@ export class GolfSocketIoService {
     return new Observable((subscriber)=>{
       this.socket.on(eventName,(data: GolfResult)=>{
         subscriber.next(data);
-        // console.log(data);
-
       })
     })
 
