@@ -9,4 +9,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## ELECTRON  TEST (run a Desktop App)
 Please Run `npm install` then 
-Run  `npm run electron` . This will build and run the app in desktop applaction
+Run  `npm run electron` . This will build and run the app in desktop application.
