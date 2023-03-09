@@ -1,52 +1,59 @@
-.holeNumber{
+.holeNumber {
     display: flex;
     flex-direction: row;
     padding-top: 5px;
-    
-    
-}
-.holePARNumber{
-    display: flex;
-    flex-direction: row;
-    
-    
-}.holePoints{
-    display: flex;
-    flex-direction: row;
-    
-    
-}
-.scoreName{
-    font-weight: bold;
-    min-width: 40px;
-    
+
 
 }
-.scoreData{
+
+.holePARNumber {
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.holePoints {
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.scoreName {
+    font-weight: bold;
+    min-width: 40px;
+
+
+}
+
+.scoreData {
     text-align: center;
     min-width: 20px;
 
 }
 
-.scoreDataRed{
+.scoreDataRed {
     text-align: center;
     min-width: 20px;
     background-color: red;
 }
 
 
-.scoreDataGreen{
+.scoreDataGreen {
     text-align: center;
     min-width: 20px;
     background-color: green;
 }
 
-.filter-section{
+.filter-section {
     margin: 20px !important;
 }
-mat-cell{
+
+mat-cell {
     display: block;
 }
+
 .mat-column-score {
-    flex: 0 0 30%;
+    flex: 0 0 380px;
 }
